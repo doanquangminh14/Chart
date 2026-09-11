@@ -42,7 +42,6 @@ Chart/
 │   ├── ...
 │   └── 16_pairplot.png
 ├── src/
-│   ├── generate_dirty_data.py # Script sinh dữ liệu thô có lỗi
 │   ├── clean_data.py          # Pipeline làm sạch dữ liệu với Pandas
 │   └── generate_charts.py     # Script vẽ toàn bộ 16 biểu đồ
 └── README.md                  # Tài liệu hướng dẫn chi tiết
@@ -411,13 +410,10 @@ pip install pandas numpy matplotlib seaborn squarify
 
 ### 2. Chạy toàn bộ quy trình
 ```bash
-# Bước 1: Tạo dữ liệu thô có lỗi
-python src/generate_dirty_data.py
-
-# Bước 2: Chạy pipeline làm sạch dữ liệu
+# Bước 1: Chạy pipeline làm sạch dữ liệu từ data/raw_data.csv
 python src/clean_data.py
 
-# Bước 3: Tự động vẽ và xuất toàn bộ 16 biểu đồ
+# Bước 2: Tự động vẽ và xuất toàn bộ 16 biểu đồ
 python src/generate_charts.py
 ```
 
